@@ -1,3 +1,3 @@
 # Week 2 Lab: System Verilog
 
-Fill out this readme as required by lab guidance
+For these exercises, each testbench uses a different approach because the size and behavior of the input space changes. Exercise 1 uses exhaustive testing since the ALU has a very small, purely combinational input space, so checking every possible input is fast and guarantees correctness. Exercise 2 uses sampled multi-cycle testing because a 16-bit LFSR has a large sequential state space, making full exhaustive testing impractical, but sampling several seeds over many cycles still catches most errors. Exercise 3 uses randomized testing because the combined module has an enormous input space, and random tests provide good coverage while remaining efficient. Each method balances completeness and computational cost based on the complexity of the design.

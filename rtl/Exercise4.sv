@@ -21,4 +21,17 @@ module Exercise4 (
     output logic [7:0] out
 );
 
+always_comb begin
+  // Default output is zero in case no condition matches
+  out = 8'h00;
+
+  if (cs) begin
+    case (sel)
+      2'b00: out = alpha;
+      2'b01: out = beta;
+      2'b10: out = gamma;
+      default: out = 8'h00;  // covers sel=3
+    endcase
+  end
+end
 endmodule
